@@ -89,7 +89,7 @@ def num_checker(question, low, high):
             print(" ")
   
 #Variable - User experience
-statement_generator("WELCOME TO MAQUIZ", " ")
+statement_generator("WELCOME TO MAQUIZ", "●")
 print(" ")
 time.sleep(1.5)
 input("PRESS ENTER TO START")
@@ -102,7 +102,7 @@ if yes_no_answer == 0:
   print(" ")
   input("- 1: pick a level from 1 - 3, each level has different difficulties. -")
   input("- level 1: addition of 0 - 20 / level 2: addition of 25 - 45. / level 3: addition of 50 - 100. -")
-  input("- 2: and just solve the questions!!  -")
+  input("- 2: and just solve the questions!! -")
   input("- whenever you want to quit type '000' -")
   print(" ")
   time.sleep(1)
@@ -132,7 +132,7 @@ print(" ")
 
 #Gameplay
 print(" ")
-statement_generator("LEVEL {} QUESTIONS".format(difficulty_levels), " ")
+statement_generator("LEVEL {} QUESTIONS".format(difficulty_levels), "-")
 print(" ")
 
 while True:
@@ -145,21 +145,21 @@ while True:
       
     if user_answer == first_number + second_number:
       print(" ")
-      statement_generator("RIGHT ANSWER", " ")
+      statement_generator("RIGHT ANSWER", "✔")
       print(" ")
-      statement_generator("POINT +1", " ")
+      statement_generator("POINT +1", "-")
       rounds_played += 1 
       correct_answers += 1
       points += 1 
 
     elif user_answer != first_number + second_number:
       print(" ")
-      statement_generator("WRONG ANSWER", " ")
+      statement_generator("WRONG ANSWER", "X")
       print(" ")
-      statement_generator("POINT ADDED +0", " ")
+      statement_generator("POINT ADDED +0", "-")
       rounds_played += 1 
       wrong_answers += 1
 
   except ValueError:
-    statement_generator("NUMBER ONLY PLEASE"," ") 
+    statement_generator("NUMBER ONLY PLEASE","!") 
   
